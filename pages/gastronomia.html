@@ -10,15 +10,16 @@
     <header>
         <h1>Gastronomía de Gualeguay</h1>
         <h2>Sabores típicos entrerrianos que reflejan la identidad local.</h2>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="naturaleza.html">Naturaleza</a></li>
-                <li><a href="gastronomia.html">Gastronomía</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="cultura.html">Cultura</a></li>
-            </ul>
-        </nav>
+            <nav>
+  <ul class="nav justify-content-center">
+    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
+    <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+    <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
+  </ul>
+</nav>
+
         <hr>
     </header>
 
@@ -26,7 +27,8 @@
     <main class="padre-flex">
         <!-- Imagen destacada -->
         <figure class="caja-flex">
-            <img src="../assets/galletas.webp" alt="Platos típicos de Gualeguay" width="200" height="200">
+            <img src="../assets/galletas.webp" class="img-fluid rounded shadow" alt="Platos típicos de Gualeguay">
+
             <figcaption>Galletas entrerrianas, tradición de la panificación local.</figcaption>
         </figure>
 
@@ -84,18 +86,22 @@
     <!-- Pie de página -->
     <footer>
         <!-- Formulario de contacto / comentarios -->
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+        <form class="container my-4">
+        <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+    <label for="email" class="form-label">Correo electrónico</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+    <label for="comentario" class="form-label">Comentario</label>
+    <textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
+        </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
 
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="comentario">Comentario:</label><br>
-            <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu comentario aquí..."></textarea><br><br>
-
-            <input type="submit" value="Enviar">
-        </form>
 
         <!-- Derechos reservados -->
         <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
