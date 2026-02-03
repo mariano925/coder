@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Eventos en Gualeguay</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../styles/styles.css">
+
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
@@ -10,21 +13,25 @@
     <div class="layout">
 
         <!-- Encabezado -->
-        <header class="header">
-            <h1>Eventos y festividades en Gualeguay</h1>
-            <h2>Carnavales, ferias y celebraciones que llenan de vida la ciudad.</h2>
+        <header class="bg-primary text-white text-center p-4">
+                <h1 class="fw-bold">Eventos y festividades en Gualeguay</h1>
+                <p class="lead">Carnavales, ferias y celebraciones que llenan de vida la ciudad.</p>
         </header>
 
+
         <!-- Navegación -->
-        <nav class="nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="naturaleza.html">Naturaleza</a></li>
-                <li><a href="gastronomia.html">Gastronomía</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="cultura.html">Cultura</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
+        <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+        <li class="nav-item"><a class="nav-link active" href="eventos.html">Eventos</a></li>
+        <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
+    </ul>
+    </div>
+</nav>
+
 
         <!-- Contenido principal -->
         <main class="main padre-flex">
@@ -107,7 +114,8 @@
                 <label for="comentario">Comentario:</label><br>
                 <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu comentario aquí..."></textarea><br><br>
 
-                <input type="submit" value="Enviar">
+                <button class="btn btn-primary">Enviar</button>
+
             </form>
             <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
         </footer>
