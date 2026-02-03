@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos en Gualeguay</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Layout principal con grid-template-areas -->
+    <div class="layout">
+
+        <!-- Encabezado -->
+        <header class="header">
+            <h1>Eventos y festividades en Gualeguay</h1>
+            <h2>Carnavales, ferias y celebraciones que llenan de vida la ciudad.</h2>
+        </header>
+
+        <!-- Navegación -->
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="naturaleza.html">Naturaleza</a></li>
+                <li><a href="gastronomia.html">Gastronomía</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="main padre-flex">
+            <!-- Introducción -->
+            <section class="caja-flex">
+                <h2>Fiestas y celebraciones</h2>
+                <p>
+                    Gualeguay se destaca por sus carnavales, ferias artesanales y celebraciones religiosas
+                    que atraen visitantes de toda la región. Cada evento es una oportunidad para compartir
+                    la alegría y la identidad entrerriana.
+                </p>
+            </section>
+
+            <!-- Imagen destacada -->
+            <figure class="caja-flex">
+                <img src="../assets/carnavales-gualeguay.jpg" alt="Desfile de carnaval en Gualeguay" width="650" height="400">
+                <figcaption>Los carnavales de Gualeguay, una de las fiestas más reconocidas de Entre Ríos.</figcaption>
+            </figure>
+
+            <!-- Detalle de eventos -->
+            <section class="caja-flex">
+                <h2>Eventos destacados</h2>
+
+                <div class="eventos-grid">
+                    <article class="caja-flex">
+                        <h3>Carnavales de Gualeguay</h3>
+                        <p>
+                            Con carrozas, comparsas y música, los carnavales son el evento más esperado del año,
+                            llenando las calles de color y alegría.
+                        </p>
+                        <!-- Video simplificado -->
+                        <iframe 
+                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100064731517466%2Fvideos%2F2046865925550354%2F" 
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                    </article>
+
+                    <article class="caja-flex">
+                        <h3>Ferias artesanales</h3>
+                        <p>
+                            Espacios donde artesanos locales exhiben y venden sus creaciones en cuero, madera y tejidos.
+                        </p>
+                        <img src="../assets/artesano.jpg" alt="Artesanos en feria" width="400">
+                    </article>
+
+                    <article class="caja-flex">
+                        <h3>Fiestas patronales</h3>
+                        <p>
+                            Celebraciones religiosas que reúnen a la comunidad en torno a la fe y las tradiciones.
+                        </p>
+                        <img src="..\assets\iglesia.jpg.jpg" alt="Iglesia de Gualeguay" width="300" height="400">
+                    </article>
+
+                    <article class="caja-flex pesca-grid">
+                        <div class="texto">
+                            <h3>Pesca en Gualeguay</h3>
+                            <p>
+                                Los ríos y arroyos de Gualeguay ofrecen un entorno ideal para la pesca deportiva y recreativa.
+                                Es común encontrar especies como el dorado, el pacú y el surubí, que atraen a pescadores de toda la región.
+                            </p>
+                        </div>
+                        <figure>
+                            <img src="../assets/pezca.png" alt="Pescador en el río Gualeguay" width="400">
+                            <figcaption>Pesca deportiva en el río Gualeguay.</figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu comentario aquí..."></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+            <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>
