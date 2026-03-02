@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Gastronomía en Gualeguay</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <!-- Encabezado -->
@@ -58,11 +60,13 @@
         <!-- Galería de imágenes -->
         <section class="caja-flex">
             <h2>Galería de imágenes</h2>
-            <div class="galeria">
+            <div class="container">
+                <div class="row"
                 <figure>
                     <img src="../assets/La-parrillita-asado-para-llevar-Gualeguay-food.jpg" alt="Asado entrerriano" width="250">
                     <figcaption>Asado entrerriano</figcaption>
                 </figure>
+                </div>
                 <figure>
                     <img src="../assets/empandas.webp" alt="Empanadas caseras" width="250">
                     <figcaption>Empanadas caseras</figcaption>
@@ -84,27 +88,30 @@
     </main>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="bg-dark text-white p-4 mt-4">
         <!-- Formulario de contacto / comentarios -->
         <form class="container my-4">
-        <div class="mb-3">
+        <div class="container>
+            <div class="row"
     <label for="nombre" class="form-label">Nombre</label>
     <input type="text" class="form-control" id="nombre" name="nombre" required>
         </div>
-        <div class="mb-3">
+        <div class="container">
+            <div class="row"
     <label for="email" class="form-label">Correo electrónico</label>
     <input type="email" class="form-control" id="email" name="email" required>
         </div>
-        <div class="mb-3">
+        <div class="container">
+            <div class="row"
     <label for="comentario" class="form-label">Comentario</label>
     <textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
         </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-
-
-        <!-- Derechos reservados -->
-        <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
+<!-- Derechos reservados -->
+    <p class="text-center mt-3">&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 </html>
