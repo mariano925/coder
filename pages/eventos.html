@@ -1,125 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos en Gualeguay</title>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../styles.css">
+    <title>Eventos — Turismo en Gualeguay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body class="layout">
 
-</head>
-<body>
-    <!-- Layout principal con grid-template-areas -->
-    <div class="layout">
+    <header>
+      <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="../index.html">Turismo Gualeguay</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
+            <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="eventos.html">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <!-- Encabezado -->
-        <header class="header bg-primary text-white text-center p-4">
-                <h1 class="fw-bold">Eventos y festividades en Gualeguay</h1>
-                <p class="lead">Carnavales, ferias y celebraciones que llenan de vida la ciudad.</p>
-        </header>
+    <section class="hero">
+      <div class="container">
+        <h1>Eventos y festividades</h1>
+        <p>Carnavales, ferias y celebraciones que llenan de vida Gualeguay</p>
+      </div>
+    </section>
 
+    <main class="container my-5">
 
-        <!-- Navegación -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-    <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
-        <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
-        <li class="nav-item"><a class="nav-link active" href="eventos.html">Eventos</a></li>
-        <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
-    </ul>
-    </div>
-</nav>
+      <!-- Intro — grid-2col -->
+      <section class="grid-2col mb-5">
+        <div>
+          <h2>Fiestas y celebraciones</h2>
+          <p>
+            Gualeguay se destaca por sus carnavales, ferias artesanales y celebraciones religiosas
+            que atraen visitantes de toda la región. Cada evento es una oportunidad para compartir
+            la alegría y la identidad entrerriana.
+          </p>
+        </div>
+        <figure>
+          <img src="../assets/carnavales-gualeguay.jpg" alt="Carnavales de Gualeguay" class="img-fluid">
+          <figcaption>Los carnavales más reconocidos de Entre Ríos.</figcaption>
+        </figure>
+      </section>
 
-        <!-- Contenido principal -->
-        <main class="main padre-flex">
-            <!-- Introducción -->
-            <section class="caja-flex">
-                <h2>Fiestas y celebraciones</h2>
-                <p>
-                    Gualeguay se destaca por sus carnavales, ferias artesanales y celebraciones religiosas
-                    que atraen visitantes de toda la región. Cada evento es una oportunidad para compartir
-                    la alegría y la identidad entrerriana.
-                </p>
-            </section>
-
-            <!-- Imagen destacada -->
-            <figure class="caja-flex">
-                <img src="../assets/carnavales-gualeguay.jpg" alt="Desfile de carnaval en Gualeguay" width="650" height="400">
-                <figcaption>Los carnavales de Gualeguay, una de las fiestas más reconocidas de Entre Ríos.</figcaption>
+      <!-- Tarjetas de eventos -->
+      <section class="mb-5">
+        <h2 class="mb-4">Eventos destacados</h2>
+        <div class="cards">
+          <article class="card p-4">
+            <h3>Carnavales de Gualeguay</h3>
+            <p>Con carrozas, comparsas y música, los carnavales son el evento más esperado del año.</p>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100064731517466%2Fvideos%2F2046865925550354%2F"
+              height="250" allowfullscreen title="Video carnavales de Gualeguay">
+            </iframe>
+          </article>
+          <article class="card p-4">
+            <h3>Ferias artesanales</h3>
+            <p>Espacios donde artesanos locales exhiben y venden sus creaciones en cuero, madera y tejidos.</p>
+            <img src="../assets/artesano.jpg" alt="Artesanos en feria local" class="img-fluid">
+          </article>
+          <article class="card p-4">
+            <h3>Fiestas patronales</h3>
+            <p>Celebraciones religiosas que reúnen a la comunidad en torno a la fe y las tradiciones.</p>
+            <img src="../assets/iglesia.jpg.jpg" alt="Iglesia de Gualeguay" class="img-fluid">
+          </article>
+          <article class="card p-4">
+            <h3>Pesca deportiva</h3>
+            <p>Dorado, pacú y surubí atraen pescadores de toda la región al río Gualeguay.</p>
+            <figure>
+              <img src="../assets/pezca.png" alt="Pescador en el río Gualeguay" class="img-fluid">
+              <figcaption>Pesca deportiva en el río Gualeguay.</figcaption>
             </figure>
+          </article>
+        </div>
+      </section>
 
-            <!-- Detalle de eventos -->
-            <section class="caja-flex">
-                <h2>Eventos destacados</h2>
+    </main>
 
-                <div class="eventos-grid">
-                    <article class="caja-flex">
-                        <h3>Carnavales de Gualeguay</h3>
-                        <p>
-                            Con carrozas, comparsas y música, los carnavales son el evento más esperado del año,
-                            llenando las calles de color y alegría.
-                        </p>
-                        <!-- Video simplificado -->
-                        <iframe 
-                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100064731517466%2Fvideos%2F2046865925550354%2F" 
-                            frameborder="0" allowfullscreen>
-                        </iframe>
-                    </article>
+    <footer>
+      <div class="container text-center">
+        <p>&copy; 2025 Turismo en Gualeguay — Todos los derechos reservados</p>
+        <address>
+          <a href="contacto.html">Contactanos</a> |
+          Gualeguay, Entre Ríos, Argentina
+        </address>
+      </div>
+    </footer>
 
-                    <article class="caja-flex">
-                        <h3>Ferias artesanales</h3>
-                        <p>
-                            Espacios donde artesanos locales exhiben y venden sus creaciones en cuero, madera y tejidos.
-                        </p>
-                        <img src="../assets/artesano.jpg" alt="Artesanos en feria" width="400">
-                    </article>
-
-                    <article class="caja-flex">
-                        <h3>Fiestas patronales</h3>
-                        <p>
-                            Celebraciones religiosas que reúnen a la comunidad en torno a la fe y las tradiciones.
-                        </p>
-                        <img src="../assets/iglesia.jpg.jpg" alt="Iglesia de Gualeguay" width="300" height="400">
-                    </article>
-
-                    <article class="caja-flex pesca-grid">
-                        <div class="texto">
-                            <h3>Pesca en Gualeguay</h3>
-                            <p>
-                                Los ríos y arroyos de Gualeguay ofrecen un entorno ideal para la pesca deportiva y recreativa.
-                                Es común encontrar especies como el dorado, el pacú y el surubí, que atraen a pescadores de toda la región.
-                            </p>
-                        </div>
-                        <figure>
-                            <img src="../assets/pezca.png" alt="Pescador en el río Gualeguay" width="400">
-                            <figcaption>Pesca deportiva en el río Gualeguay.</figcaption>
-                        </figure>
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <!-- Pie de página -->
-        <footer class="footer bg-primary text-center p-4">
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-
-                <label for="email">Correo electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="comentario">Comentario:</label><br>
-                <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu comentario aquí..."></textarea><br><br>
-
-                <button class="btn btn-primary">Enviar</button>
-
-            </form>
-            <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>

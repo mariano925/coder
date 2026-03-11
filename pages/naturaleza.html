@@ -1,91 +1,122 @@
+<!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naturaleza en Gualeguay</title>
+    <title>Naturaleza — Turismo en Gualeguay</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles.css">
-    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
 
+  <body class="layout">
 
-</head>
-<body>
-    <!-- Encabezado pg-primary text-white text-center p-4"rincipal -->
-    <header class="header bg-primary text-white text-center p-4">
-        <h1 class="mb-2">Naturaleza en Gualeguay</h1>
-        <h2 class="mb-4">Descubrí naturaleza, gastronomía local, eventos y festividades, su cultura y tradiciones en el corazón de Entre Ríos.</h2>
-        <nav>
-            <ul class="nav justify-content-start">
-    <li class="nav-item"><a class="nav-link disabled" href="../index.html">Inicio</a></li>
-    <li class="nav-item"><a class="nav-link active" href="naturaleza.html">Naturaleza</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="gastronomia.html">Gastronomía</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="eventos.html">Eventos</a></li>
-    <li class="nav-item"><a class="nav-link disabled" href="cultura.html">Cultura</a></li>
-</ul>
-
-        </nav>
-        <hr>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="../index.html">Turismo Gualeguay</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="naturaleza.html">Naturaleza</a></li>
+            <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="padre-flex">
-        
-        <!-- Sección Naturaleza -->
-<section class="caja-flex">
-    <h2>Naturaleza en Gualeguay</h2>
-    <p>
-    La costanera de Gualeguay es uno de los espacios más concurridos de la ciudad, 
-    donde familias y amigos se reúnen para disfrutar de atardeceres únicos junto al río. 
-    Con su paseo peatonal, áreas de recreación y espacios para actividades deportivas, 
-    se ha convertido en un punto de encuentro que combina naturaleza, cultura y vida social. 
-    Durante los fines de semana, es común ver ferias artesanales y espectáculos al aire libre 
-    que le dan un encanto especial a este lugar.
-</p>
-
-    <!-- Video correctamente insertado -->
-    <figure class="caja-flex">
-    <img src="../assets/turismo.jpg" alt="Costanera de Gualeguay" width="650" height="400">
-    <figcaption>costanera de gualeguay</figcaption>
-    </figure>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Naturaleza en Gualeguay</h1>
+        <p>Ríos, parques y reservas naturales en el corazón de Entre Ríos</p>
+      </div>
     </section>
 
-<section class="caja-flex">
-    <h2>Rio Gualeguay</h2>
-    <p>Ríos, parques y reservas naturales que invitan al descanso y la aventura. 
-        La costanera del río Gualeguay es ideal para caminatas, pesca y paseos en bote, 
-        mientras que los espacios verdes cercanos ofrecen actividades al aire libre y contacto con la biodiversidad entrerriana.
-    </p>
-    <video width="500" controls>
-        <source src="../assets/naturaleza.mp4" type="video/mp4">
-    </video>
-</section>
+    <!-- Main -->
+    <main class="container my-5">
+
+      <!-- Costanera — grid-2col -->
+      <section class="grid-2col mb-5">
+        <figure>
+          <img src="../assets/turismo.jpg" alt="Costanera de Gualeguay" class="img-fluid">
+          <figcaption>Costanera de Gualeguay</figcaption>
+        </figure>
+        <div>
+          <h2>La Costanera</h2>
+          <p>
+            La costanera de Gualeguay es uno de los espacios más concurridos de la ciudad,
+            donde familias y amigos se reúnen para disfrutar de atardeceres únicos junto al río.
+          </p>
+          <p>
+            Durante los fines de semana, es común ver ferias artesanales y espectáculos
+            al aire libre que le dan un encanto especial a este lugar.
+          </p>
+        </div>
+      </section>
+
+      <!-- Río Gualeguay -->
+      <section class="mb-5">
+        <h2>Río Gualeguay</h2>
+        <p>
+          El río Gualeguay es ideal para caminatas, pesca y paseos en bote,
+          mientras que los espacios verdes cercanos ofrecen actividades al aire libre
+          y contacto con la biodiversidad entrerriana.
+        </p>
+        <figure>
+          <video width="100%" controls style="border-radius: var(--radio); box-shadow: var(--sombra);">
+            <source src="../assets/naturaleza.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <figcaption>Río Gualeguay — naturaleza entrerriana</figcaption>
+        </figure>
+      </section>
+
+      <!-- Galería de naturaleza — CSS Grid gallery -->
+      <section class="mb-5">
+        <h2 class="mb-4">Galería</h2>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/turismo.jpg" alt="Costanera de Gualeguay" class="img-fluid">
+            <figcaption>Costanera</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/plaza.jpg.jpg" alt="Plaza de Gualeguay" class="img-fluid">
+            <figcaption>Plaza San Martín</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/foto gualeguay.jpg" alt="Gualeguay" class="img-fluid">
+            <figcaption>Vistas de Gualeguay</figcaption>
+          </figure>
+        </div>
+      </section>
 
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer>
-        <form class="container my-4">
-  <div class="mb-3">
-    <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" required>
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Correo electrónico</label>
-    <input type="email" class="form-control" id="email" name="email" required>
-  </div>
-  <div class="mb-3">
-    <label for="comentario" class="form-label">Comentario</label>
-    <textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
-
-</form>
-
-
-        <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
+      <div class="container text-center">
+        <p>&copy; 2025 Turismo en Gualeguay — Todos los derechos reservados</p>
+        <address>
+          <a href="contacto.html">Contactanos</a> |
+          Gualeguay, Entre Ríos, Argentina
+        </address>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-</body>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+  </body>
 </html>
