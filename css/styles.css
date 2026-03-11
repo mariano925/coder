@@ -1,32 +1,358 @@
-* {
+
+/* ============================================
+   TURISMO GUALEGUAY — styles.css
+   Paleta: tierra y naranja cálido
+   Fuente: Poppins (Google Fonts)
+   ============================================ */
+
+/* ---------- VARIABLES ---------- */
+:root {
+  --color-primario:    #e07b2e;
+  --color-secundario:  #c45e1a;
+  --color-acento:      #f5a623;
+  --color-fondo:       #fdf6ee;
+  --color-fondo-alt:   #f3e9d8;
+  --color-texto:       #2c1a0e;
+  --color-texto-suave: #6b4c30;
+  --color-borde:       #ddc9aa;
+  --fuente:            'Poppins', sans-serif;
+  --radio:             10px;
+  --sombra:            0 4px 16px rgba(0,0,0,0.08);
+
+  /* Escala tipográfica */
+  --fs-300: 0.82rem;   /* pequeño: figcaption, notas */
+  --fs-400: 1rem;      /* base: párrafos */
+  --fs-500: 1.1rem;    /* medio: subtítulos */
+  --fs-700: 1.4rem;    /* grande: h2 */
+  --fs-900: 2.4rem;    /* hero: h1 */
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* ---------- BASE ---------- */
 body {
-  background: orange;
-  font-family: "Poppins", sans-serif;
-  color: #222;
-  line-height: 1.5;
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.7;
 }
 
-header {
-  background: yellow;
-  text-align: center;
-  padding: 20px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
 
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-secundario);
+  text-decoration: underline;
+}
+
+/* ---------- TIPOGRAFÍA ---------- */
 h1 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  margin-bottom: 10px;
-  color: black;
+  font-size: clamp(1.6rem, 4vw, var(--fs-900));
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 400;
-  color: gray;
+  font-size: clamp(1.1rem, 2.5vw, var(--fs-700));
+  font-weight: 600;
+  color: var(--color-texto);
+  margin-bottom: 0.5rem;
 }
 
-/*# sourceMappingURL=styles.css.map */
+h3 {
+  font-size: var(--fs-500);
+  font-weight: 600;
+  color: var(--color-texto);
+  margin-bottom: 0.4rem;
+}
+
+p {
+  font-size: var(--fs-400);
+  color: var(--color-texto-suave);
+  margin-bottom: 1rem;
+}
+
+figcaption {
+  font-size: var(--fs-300);
+  color: var(--color-texto-suave);
+  font-style: italic;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid var(--color-borde);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Navbar flex propio */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  color: var(--color-primario) !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--color-secundario) !important;
+}
+
+.nav-link {
+  color: var(--color-texto-suave) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: var(--radio);
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primario) !important;
+  background-color: var(--color-fondo-alt);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+  color: white;
+  padding: 72px 0 52px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.05rem;
+}
+
+/* ---------- BOTONES ---------- */
+.btn-primary {
+  background-color: var(--color-primario) !important;
+  border-color: var(--color-primario) !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: var(--radio);
+  padding: 0.5rem 1.6rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secundario) !important;
+  border-color: var(--color-secundario) !important;
+  transform: translateY(-2px);
+}
+
+/* ---------- TARJETAS ---------- */
+
+/* Contenedor flex propio para grillas de cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards .card {
+  flex: 1 1 280px;
+}
+
+.card {
+  border: 1px solid var(--color-borde) !important;
+  border-radius: var(--radio) !important;
+  box-shadow: var(--sombra);
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(224,123,46,0.15);
+}
+
+/* ---------- FORMULARIO ---------- */
+.form-label {
+  font-weight: 600;
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border: 1.5px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-family: var(--fuente);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(224,123,46,0.15);
+  outline: none;
+}
+
+/* ---------- IFRAME ---------- */
+iframe {
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  width: 100%;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: var(--color-fondo-alt);
+  border-top: 2px solid var(--color-borde);
+  color: var(--color-texto-suave);
+  font-size: 0.88rem;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: var(--color-primario);
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--color-secundario);
+}
+
+footer address {
+  font-style: normal;
+  margin-top: 0.4rem;
+}
+
+/* ============================================
+   CSS GRID — layout principal
+   ============================================ */
+
+/* Layout general de cada página */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "hero"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+.layout header  { grid-area: header; }
+.layout .hero   { grid-area: hero;   }
+.layout main    { grid-area: main;   }
+.layout footer  { grid-area: footer; }
+
+/* Galería responsive con Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Sección de dos columnas (texto + imagen) */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVE — Mobile First (min-width)
+   ============================================ */
+
+/* — Tablet (≥ 768px) — */
+@media (min-width: 768px) {
+
+  /* Layout con sidebar */
+  .layout {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "header header"
+      "hero   hero"
+      "main   main"
+      "footer footer";
+  }
+
+  /* Galería: 2 columnas en tablet */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Dos columnas para texto + imagen */
+  .grid-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Cards: mínimo 2 por fila */
+  .cards .card {
+    flex: 1 1 240px;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+/* — Desktop (≥ 1024px) — */
+@media (min-width: 1024px) {
+
+  /* Layout completo con sidebar */
+  .layout {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "hero   hero   hero"
+      "main   main   main"
+      "footer footer footer";
+  }
+
+  /* Galería: 3 columnas en desktop */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+  }
+}
+
+/* — Mobile extra pequeño (< 480px) — */
+@media (max-width: 480px) {
+  .btn-primary { width: 100%; text-align: center; }
+  .hero { padding: 40px 0 28px; }
+}
