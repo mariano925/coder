@@ -1,0 +1,35 @@
+// ── Tipografía ───────────────────────────
+h1 {
+  font-size: clamp(1.6rem, 4vw, $fs-900);
+  font-weight: 700;
+  color: $color-texto;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: clamp(1.1rem, 2.5vw, $fs-700);
+  font-weight: 600;
+  color: $color-texto;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: $fs-500;
+  font-weight: 600;
+  color: $color-texto;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  font-size: $fs-400;
+  color: $color-texto-suave;
+  margin-bottom: 1rem;
+}
+
+figcaption {
+  font-size: $fs-300;
+  color: $color-texto-suave;
+  font-style: italic;
+  margin-top: 0.4rem;
+  text-align: center;
+}

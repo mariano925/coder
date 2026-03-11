@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios — Turismo en Gualeguay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="layout">
+
+    <header>
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="../index.html">Turismo Gualeguay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Servicios en Gualeguay</h1>
+            <p>Todo lo que necesitás para tu estadía: alojamiento, transporte y servicios profesionales.</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+
+        <!-- Alojamiento -->
+        <section class="mb-5">
+            <h2 class="mb-4">Alojamiento</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🏨 Hoteles y apart-hoteles</h3>
+                        <p class="card-text">Gualeguay cuenta con opciones de alojamiento céntrico con todas las comodidades, ideales para estadías cortas o largas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🏕️ Campings y cabañas</h3>
+                        <p class="card-text">Para quienes prefieren el contacto con la naturaleza, hay campings equipados y cabañas cerca del río con servicios básicos incluidos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🏠 Hospedajes familiares</h3>
+                        <p class="card-text">Una opción más íntima y económica, con atención personalizada y ambiente hogareño en el corazón de la ciudad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transporte -->
+        <section class="mb-5">
+            <h2 class="mb-4">Transporte</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🚐 Combis y micros</h3>
+                        <p class="card-text">Servicios de larga distancia que conectan Gualeguay con Paraná, Buenos Aires y principales ciudades de Entre Ríos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🚖 Remises</h3>
+                        <p class="card-text">Servicio de remises disponible las 24 horas para traslados dentro de la ciudad y hacia localidades cercanas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🚲 Bicicletas y motos</h3>
+                        <p class="card-text">Alquiler de bicicletas y motos para recorrer la ciudad y sus alrededores de manera independiente y económica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios profesionales y técnicos -->
+        <section class="mb-5">
+            <h2 class="mb-4">Servicios profesionales y técnicos</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🧭 Guías turísticos</h3>
+                        <p class="card-text">Guías locales certificados que organizan recorridos históricos, naturales y culturales adaptados a cada visitante.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">📷 Fotografía y video</h3>
+                        <p class="card-text">Profesionales de fotografía y video disponibles para registrar tu visita, eventos o actividades en la ciudad.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">🔧 Servicios técnicos</h3>
+                        <p class="card-text">Mecánicas, estaciones de servicio y talleres técnicos disponibles para asistencia vehicular durante tu estadía.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto al final del main -->
+        <section class="mb-5">
+            <h2 class="mb-4">Contacto</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="comentario" name="comentario" rows="5" placeholder="Consultá sobre cualquier servicio..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Turismo en Gualeguay — Todos los derechos reservados</p>
+            <address>Gualeguay, Entre Ríos, Argentina</address>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

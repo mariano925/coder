@@ -1,0 +1,43 @@
+// ── Sidebar ──────────────────────────────
+.sidebar-col {
+  grid-area: sidebar;
+  padding: 2rem 1rem 2rem 0;
+}
+
+.sidebar {
+  background-color: $color-fondo-alt;
+  border: 1px solid $color-borde;
+  border-radius: $radio;
+  padding: 1.5rem;
+
+  h3 {
+    color: $color-primario;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $color-borde;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  ul li a {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    color: $color-texto-suave;
+    @include transicion(background color);
+
+    &:hover {
+      background-color: $color-fondo;
+      color: $color-primario;
+      text-decoration: none;
+    }
+  }
+}

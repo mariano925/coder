@@ -1,0 +1,34 @@
+// ── Formularios ──────────────────────────
+.form-label {
+  font-weight: 600;
+  color: $color-texto;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border: 1.5px solid $color-borde;
+  border-radius: $radio;
+  font-family: $fuente;
+  @include transicion(border-color box-shadow);
+
+  &:focus {
+    border-color: $color-primario;
+    box-shadow: 0 0 0 3px rgba($color-primario, 0.15);
+    outline: none;
+  }
+}
+
+// ── Sección de contacto ──────────────────
+.seccion-contacto {
+  background-color: $color-fondo-alt;
+  border: 1px solid $color-borde;
+  border-radius: $radio;
+  padding: 2rem;
+
+  h2 {
+    color: $color-primario;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $color-borde;
+  }
+}

@@ -1,0 +1,48 @@
+// ── Hero ─────────────────────────────────
+.hero {
+  background: linear-gradient(135deg, $color-primario, $color-acento);
+  color: white;
+  padding: 48px 0 36px;
+  text-align: center;
+
+  h1 {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+  }
+
+  @include tablet {
+    padding: 64px 0 48px;
+  }
+
+  @include desktop {
+    padding: 80px 0 60px;
+  }
+}
+
+// ── Animación fade-in al cargar ──────────
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero .carousel-caption {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+// ── Iframe ───────────────────────────────
+iframe {
+  border-radius: $radio;
+  box-shadow: $sombra;
+  width: 100%;
+}

@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturaleza — Turismo en Gualeguay</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos propios -->
     <link rel="stylesheet" href="../css/styles.css">
   </head>
-
   <body class="layout">
 
-    <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg container">
         <a class="navbar-brand" href="../index.html">Turismo Gualeguay</a>
@@ -29,13 +24,11 @@
             <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
             <li class="nav-item"><a class="nav-link" href="cultura.html">Cultura</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
       <div class="container">
         <h1>Naturaleza en Gualeguay</h1>
@@ -43,10 +36,8 @@
       </div>
     </section>
 
-    <!-- Main -->
     <main class="container my-5">
 
-      <!-- Costanera — grid-2col -->
       <section class="grid-2col mb-5">
         <figure>
           <img src="../assets/turismo.jpg" alt="Costanera de Gualeguay" class="img-fluid">
@@ -54,25 +45,14 @@
         </figure>
         <div>
           <h2>La Costanera</h2>
-          <p>
-            La costanera de Gualeguay es uno de los espacios más concurridos de la ciudad,
-            donde familias y amigos se reúnen para disfrutar de atardeceres únicos junto al río.
-          </p>
-          <p>
-            Durante los fines de semana, es común ver ferias artesanales y espectáculos
-            al aire libre que le dan un encanto especial a este lugar.
-          </p>
+          <p>La costanera de Gualeguay es uno de los espacios más concurridos de la ciudad, donde familias y amigos se reúnen para disfrutar de atardeceres únicos junto al río.</p>
+          <p>Durante los fines de semana, es común ver ferias artesanales y espectáculos al aire libre que le dan un encanto especial a este lugar.</p>
         </div>
       </section>
 
-      <!-- Río Gualeguay -->
       <section class="mb-5">
         <h2>Río Gualeguay</h2>
-        <p>
-          El río Gualeguay es ideal para caminatas, pesca y paseos en bote,
-          mientras que los espacios verdes cercanos ofrecen actividades al aire libre
-          y contacto con la biodiversidad entrerriana.
-        </p>
+        <p>El río Gualeguay es ideal para caminatas, pesca y paseos en bote, mientras que los espacios verdes cercanos ofrecen actividades al aire libre y contacto con la biodiversidad entrerriana.</p>
         <figure>
           <video width="100%" controls style="border-radius: var(--radio); box-shadow: var(--sombra);">
             <source src="../assets/naturaleza.mp4" type="video/mp4">
@@ -82,7 +62,6 @@
         </figure>
       </section>
 
-      <!-- Galería de naturaleza — CSS Grid gallery -->
       <section class="mb-5">
         <h2 class="mb-4">Galería</h2>
         <div class="gallery">
@@ -101,22 +80,36 @@
         </div>
       </section>
 
+      <!-- Formulario de contacto al final del main -->
+      <section class="mb-5">
+        <h2 class="mb-4">Contacto</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="comentario" class="form-label">Comentario</label>
+            <textarea class="form-control" id="comentario" name="comentario" rows="5" placeholder="Escribí tu consulta o comentario..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </section>
+
     </main>
 
-    <!-- Footer -->
     <footer>
       <div class="container text-center">
         <p>&copy; 2025 Turismo en Gualeguay — Todos los derechos reservados</p>
-        <address>
-          <a href="contacto.html">Contactanos</a> |
-          Gualeguay, Entre Ríos, Argentina
-        </address>
+        <address>Gualeguay, Entre Ríos, Argentina</address>
       </div>
     </footer>
 
-    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
-
   </body>
 </html>

@@ -1,0 +1,51 @@
+// ── Cards ────────────────────────────────
+.card {
+  border: 1px solid $color-borde !important;
+  border-radius: $radio !important;
+  box-shadow: $sombra;
+  background-color: #fff;
+  height: 100%;
+  @include transicion(transform box-shadow);
+
+  &:hover {
+    transform: translateY(-5px);
+    @include sombra-hover;
+  }
+
+  &-title {
+    font-size: $fs-500;
+    font-weight: 600;
+    color: $color-texto;
+  }
+
+  &-text {
+    color: $color-texto-suave;
+  }
+
+  &-img-top {
+    border-radius: $radio $radio 0 0;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+// ── Grid de cards ────────────────────────
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+

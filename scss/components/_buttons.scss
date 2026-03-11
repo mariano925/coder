@@ -1,0 +1,17 @@
+// ── Botones ──────────────────────────────
+.btn-primary {
+  background-color: $color-primario !important;
+  border-color: $color-primario !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: $radio;
+  padding: 0.5rem 1.6rem;
+  display: inline-block;
+  @include transicion(background);
+
+  &:hover {
+    background-color: $color-secundario !important;
+    border-color: $color-secundario !important;
+    transform: translateY(-2px);
+  }
+}

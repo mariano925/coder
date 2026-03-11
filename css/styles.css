@@ -19,11 +19,11 @@
   --sombra:            0 4px 16px rgba(0,0,0,0.08);
 
   /* Escala tipográfica */
-  --fs-300: 0.82rem;   /* pequeño: figcaption, notas */
-  --fs-400: 1rem;      /* base: párrafos */
-  --fs-500: 1.1rem;    /* medio: subtítulos */
-  --fs-700: 1.4rem;    /* grande: h2 */
-  --fs-900: 2.4rem;    /* hero: h1 */
+  --fs-300: 0.82rem;
+  --fs-400: 1rem;
+  --fs-500: 1.1rem;
+  --fs-700: 1.4rem;
+  --fs-900: 2.4rem;
 }
 
 /* ---------- RESET ---------- */
@@ -148,7 +148,7 @@ header {
 .hero {
   background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
   color: white;
-  padding: 72px 0 52px;
+  padding: 48px 0 36px;
   text-align: center;
 }
 
@@ -171,6 +171,7 @@ header {
   border-radius: var(--radio);
   padding: 0.5rem 1.6rem;
   transition: background 0.2s, transform 0.15s;
+  display: inline-block;
 }
 
 .btn-primary:hover {
@@ -180,29 +181,28 @@ header {
 }
 
 /* ---------- TARJETAS ---------- */
-
-/* Contenedor flex propio para grillas de cards */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.cards .card {
-  flex: 1 1 280px;
-}
-
 .card {
   border: 1px solid var(--color-borde) !important;
   border-radius: var(--radio) !important;
   box-shadow: var(--sombra);
   background-color: #fff;
   transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(224,123,46,0.15);
+}
+
+.card-title {
+  font-size: var(--fs-500);
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.card-text {
+  color: var(--color-texto-suave);
 }
 
 /* ---------- FORMULARIO ---------- */
@@ -232,6 +232,45 @@ iframe {
   width: 100%;
 }
 
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  background-color: var(--color-fondo-alt);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+}
+
+.sidebar h3 {
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-borde);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  color: var(--color-texto-suave);
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background-color: var(--color-fondo-alt);
@@ -256,10 +295,14 @@ footer address {
 }
 
 /* ============================================
-   CSS GRID — layout principal
+   CSS GRID — LAYOUT PRINCIPAL
+   Mobile First: min-width exclusivamente
    ============================================ */
 
-/* Layout general de cada página */
+/*
+  BASE — Mobile (< 768px)
+  Una sola columna, todo apilado verticalmente
+*/
 .layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -288,23 +331,41 @@ footer address {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  align-items: center;
+}
+
+/*
+  Cards: Grid mobile first
+  Mobile: 1 columna
+*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 /* ============================================
-   RESPONSIVE — Mobile First (min-width)
+   RESPONSIVE — Tablet (≥ 768px)
    ============================================ */
-
-/* — Tablet (≥ 768px) — */
 @media (min-width: 768px) {
 
-  /* Layout con sidebar */
+  /*
+    Layout: el main se divide en contenido + sidebar
+    El header, hero y footer siguen siendo full width
+  */
   .layout {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 280px;
     grid-template-areas:
-      "header header"
-      "hero   hero"
-      "main   main"
-      "footer footer";
+      "header  header"
+      "hero    hero"
+      "main    sidebar"
+      "footer  footer";
+  }
+
+  /* El sidebar aparece como columna lateral */
+  .layout .sidebar-col {
+    grid-area: sidebar;
+    padding: 2rem 1rem 2rem 0;
   }
 
   /* Galería: 2 columnas en tablet */
@@ -317,9 +378,13 @@ footer address {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Cards: mínimo 2 por fila */
-  .cards .card {
-    flex: 1 1 240px;
+  /* Cards: 2 columnas en tablet */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 64px 0 48px;
   }
 
   .nav-link {
@@ -327,17 +392,31 @@ footer address {
   }
 }
 
-/* — Desktop (≥ 1024px) — */
+/* ============================================
+   RESPONSIVE — Desktop (≥ 1024px)
+   ============================================ */
 @media (min-width: 1024px) {
 
-  /* Layout completo con sidebar */
+  /*
+    Layout completo: 3 columnas
+    sidebar izquierdo | contenido principal | sidebar derecho
+  */
   .layout {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 220px 1fr 260px;
     grid-template-areas:
-      "header header header"
-      "hero   hero   hero"
-      "main   main   main"
-      "footer footer footer";
+      "header  header   header"
+      "hero    hero     hero"
+      "sidebar-left  main  sidebar"
+      "footer  footer   footer";
+  }
+
+  .layout .sidebar-left-col {
+    grid-area: sidebar-left;
+    padding: 2rem 0 2rem 1rem;
+  }
+
+  .layout .sidebar-col {
+    padding: 2rem 1rem 2rem 0;
   }
 
   /* Galería: 3 columnas en desktop */
@@ -345,13 +424,19 @@ footer address {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Galería flexible para cualquier cantidad de items */
+  .gallery-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Cards: 3 columnas en desktop */
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .hero {
     padding: 80px 0 60px;
   }
-}
-
-/* — Mobile extra pequeño (< 480px) — */
-@media (max-width: 480px) {
-  .btn-primary { width: 100%; text-align: center; }
-  .hero { padding: 40px 0 28px; }
 }

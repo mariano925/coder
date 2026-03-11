@@ -1,0 +1,25 @@
+// ── Media queries ────────────────────────
+@mixin tablet {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+// ── Flexbox centrado ─────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ── Sombra con color ─────────────────────
+@mixin sombra-hover {
+  box-shadow: 0 8px 24px rgba($color-primario, 0.15);
+}
+
+// ── Transición suave ─────────────────────
+@mixin transicion($propiedad: all, $tiempo: 0.2s) {
+  transition: $propiedad $tiempo ease;
+}

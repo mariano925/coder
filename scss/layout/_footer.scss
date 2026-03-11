@@ -1,0 +1,23 @@
+// ── Footer ───────────────────────────────
+footer {
+  background-color: $color-fondo-alt;
+  border-top: 2px solid $color-borde;
+  color: $color-texto-suave;
+  font-size: 0.88rem;
+  padding: 2rem 1rem;
+
+  a {
+    color: $color-primario;
+    font-weight: 500;
+    @include transicion(color);
+
+    &:hover {
+      color: $color-secundario;
+    }
+  }
+
+  address {
+    font-style: normal;
+    margin-top: 0.4rem;
+  }
+}

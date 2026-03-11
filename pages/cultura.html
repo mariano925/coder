@@ -2,94 +2,109 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura en Gualeguay</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <!-- Encabezado -->
+<body class="layout">
+
     <header>
-        <h1>Cultura de Gualeguay</h1>
-        <h2>Tradiciones, historia y expresiones artísticas que reflejan la identidad entrerriana.</h2>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="naturaleza.html">Naturaleza</a></li>
-                <li><a href="gastronomia.html">Gastronomía</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="cultura.html">Cultura</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="../index.html">Turismo Gualeguay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="naturaleza.html">Naturaleza</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomía</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="cultura.html">Cultura</a></li>
+                </ul>
+            </div>
         </nav>
-        <hr>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="padre-grid">
-        <!-- Introducción -->
-        <section class="caja-flex">
-            <h2>Identidad cultural</h2>
-            <p>
-                Gualeguay conserva una rica herencia cultural que se manifiesta en sus fiestas populares,
-                sus museos, la música entrerriana y las costumbres transmitidas de generación en generación.
-            </p>
-        </section>
+    <section class="hero">
+        <div class="container">
+            <h1>Cultura de Gualeguay</h1>
+            <p>Tradiciones, historia y expresiones artísticas que reflejan la identidad entrerriana.</p>
+        </div>
+    </section>
 
-        <!-- Imagen destacada -->
-        <figure class="caja-flex">
-            <img src="../assets/tradicion.jpg" alt="Celebración tradicional en Gualeguay" width="650" height="400">
-            <figcaption>Celebraciones tradicionales que fortalecen la identidad local.</figcaption>
-        </figure>
+    <main class="container my-5">
 
-        <!-- Manifestaciones culturales -->
-        <section class="caja-flex">
-            <h2>Manifestaciones culturales destacadas</h2>
-            <div class="manifestaciones-grid">
-                <article class="caja-flex">
-                    <h3>Museos y patrimonio</h3>
-                    <p>
-                        El Museo Quirós y otros espacios culturales resguardan la memoria histórica y artística de la ciudad.
-                    </p>
-                    <figure>
-                        <img src="../assets/museo.jpg" alt="Fachada del Museo Quirós en Gualeguay" width="600">
-                        <figcaption>Museo Quirós, patrimonio cultural de la ciudad.</figcaption>
-                    </figure>
-                </article>
+        <div class="grid-2col mb-5">
+            <section>
+                <h2>Identidad cultural</h2>
+                <p>Gualeguay conserva una rica herencia cultural que se manifiesta en sus fiestas populares, sus museos, la música entrerriana y las costumbres transmitidas de generación en generación.</p>
+                <p>Las artesanías en cuero, madera y tejidos son parte del saber hacer local.</p>
+            </section>
+            <figure>
+                <img src="../assets/tradicion.jpg" alt="Celebración tradicional en Gualeguay" class="img-fluid">
+                <figcaption>Celebraciones tradicionales que fortalecen la identidad local.</figcaption>
+            </figure>
+        </div>
 
-                <!-- Podés agregar más artículos aquí si querés -->
+        <section class="mb-5">
+            <h2 class="mb-4">Manifestaciones culturales destacadas</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="../assets/museo.jpg" alt="Fachada del Museo Quirós en Gualeguay" class="card-img-top" style="border-radius: 10px 10px 0 0; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="card-title">Museos y patrimonio</h3>
+                        <p class="card-text">El Museo Quirós y otros espacios culturales resguardan la memoria histórica y artística de la ciudad.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Artesanías locales</h3>
+                        <p class="card-text">El trabajo en cuero, madera y tejidos es parte de la identidad artesanal de Gualeguay, con piezas únicas que reflejan el saber hacer de sus artesanos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Música entrerriana</h3>
+                        <p class="card-text">La chamarrita, el chamamé y la milonga suenan en peñas y festivales que mantienen viva la música popular de la región.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Texto general de cultura -->
-        <section class="caja-flex">
-            <h2>Cultura de Gualeguay</h2>
-            <p>
-                La cultura de Gualeguay es el reflejo de su historia, sus tradiciones y la creatividad de su gente. 
-                La ciudad se reconoce por su fuerte identidad entrerriana, donde conviven el patrimonio histórico, 
-                las expresiones artísticas y las costumbres transmitidas de generación en generación. 
-                El Museo Quirós y otros espacios culturales resguardan la memoria colectiva, mientras que la literatura 
-                y la música popular, como el chamamé y las coplas, mantienen viva la esencia de la región. 
-                Las artesanías en cuero, madera y tejidos son parte del saber hacer local, y representan la conexión 
-                entre la comunidad y su entorno. En cada rincón de Gualeguay se respira una cultura que combina 
-                tradición y modernidad, y que constituye la verdadera identidad de la ciudad.
-            </p>
+        <!-- Formulario de contacto al final del main -->
+        <section class="mb-5">
+            <h2 class="mb-4">Contacto</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="comentario" name="comentario" rows="5" placeholder="Escribí tu consulta o comentario..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </section>
+
     </main>
 
-    <!-- Pie de página -->
     <footer>
-        <!-- Formulario de contacto / comentarios -->
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="comentario">Comentario:</label><br>
-            <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu comentario aquí..."></textarea><br><br>
-
-            <input type="submit" value="Enviar">
-        </form>
-        <p>&copy; 2025 Turismo en Gualeguay - Todos los derechos reservados</p>
+        <div class="container text-center">
+            <p>&copy; 2025 Turismo en Gualeguay — Todos los derechos reservados</p>
+            <address>Gualeguay, Entre Ríos, Argentina</address>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

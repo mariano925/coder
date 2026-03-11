@@ -1,0 +1,38 @@
+// ── Reset base ───────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $fuente;
+  background-color: $color-fondo;
+  color: $color-texto;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $radio;
+  box-shadow: $sombra;
+}
+
+a {
+  color: $color-primario;
+  text-decoration: none;
+  @include transicion(color);
+
+  &:hover {
+    color: $color-secundario;
+    text-decoration: underline;
+  }
+}
