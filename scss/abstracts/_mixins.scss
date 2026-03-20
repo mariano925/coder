@@ -19,7 +19,11 @@
   box-shadow: 0 8px 24px rgba($color-primario, 0.15);
 }
 
-// ── Transición suave ─────────────────────
-@mixin transicion($propiedad: all, $tiempo: 0.2s) {
-  transition: $propiedad $tiempo ease;
+// ── Transición suave (acepta múltiples propiedades) ──
+@mixin transicion($propiedades...) {
+  $lista: ();
+  @each $p in $propiedades {
+    $lista: append($lista, $p 0.2s ease, comma);
+  }
+  transition: $lista;
 }

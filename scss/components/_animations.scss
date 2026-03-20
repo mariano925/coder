@@ -1,0 +1,33 @@
+// ── Keyframes ────────────────────────────
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// ── Clase que JS activa al hacer scroll ──
+.animar {
+  opacity: 0;
+}
+
+.animar.visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+// ── Delay escalonado para cards ───────────
+.animar:nth-child(2) { animation-delay: 0.1s; }
+.animar:nth-child(3) { animation-delay: 0.2s; }
+.animar:nth-child(4) { animation-delay: 0.3s; }
+
+// ── Hero caption (ya existente, mejorado) ─
+.hero h1 {
+  animation: fadeInUp 0.7s ease forwards;
+}
+.hero p {
+  animation: fadeInUp 0.7s ease 0.15s forwards;
+  opacity: 0;
+}

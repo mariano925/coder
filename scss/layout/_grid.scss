@@ -33,4 +33,17 @@
   }
 }
 
-// ── Galería ──────
+// ── Galería automática (cualquier cantidad de items) ──
+.gallery-auto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
