@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubrí Gualeguay, la Perla del Entre Ríos. Naturaleza, gastronomía, eventos culturales y servicios turísticos para planear tu visita.">
     <title>Turismo en Gualeguay</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +39,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/plaza.jpg" class="d-block w-100" alt="Plaza San Martín de Gualeguay" style="max-height: 480px; object-fit: cover;">
+            <img src="assets/plaza.jpg.jpg" class="d-block w-100" alt="Plaza San Martín de Gualeguay" style="max-height: 480px; object-fit: cover;">
             <div class="carousel-caption d-none d-md-block">
               <h2 style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Descubrí Gualeguay</h2>
               <p style="color: rgba(255,255,255,0.9);">Plaza San Martín, corazón de la ciudad</p>
@@ -186,5 +187,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+    <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.card, .grid-2col, .gallery figure, .hero')
+    .forEach(el => {
+      el.classList.add('animar');
+      observer.observe(el);
+    });
+</script>
   </body>
 </html>
